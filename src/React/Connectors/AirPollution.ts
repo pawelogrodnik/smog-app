@@ -21,6 +21,14 @@ export function getStationDetails(stationID: number): Promise<any> {
     .catch(err => console.error(err));
 }
 
+export function getCurrentSummary(stationID: number): Promise<any> {
+    return fetch(`${baseURL}/sensors/${stationID}`, {
+        headers: headers
+    })
+    .then(response => response.json())
+    .catch(err => console.error(err));
+}
+
 export function getCoords(loc: string): Promise<any> {
     return fetch(`${gMapsURLBaseUrl}${encodeURI(loc)}&key=${GAPI}`).then(response => response.json()).catch(err => console.log(err));
 }

@@ -1,0 +1,80 @@
+
+.SingleStation {
+    padding: 10px 15px;
+    // border: 2px solid #000;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    min-height: 255px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 50px 5px;
+    transition: 0.5s;
+    &.green {
+        box-shadow: #49cc90 0px 0px 15px 5px;  
+    }
+    &.greenDark {
+        box-shadow: #49cc90 0px 0px 15px 5px;  
+    }
+    &.yellow {
+        box-shadow: #fca130 0px 0px 15px 5px;  
+    }
+    &.orange {
+        box-shadow: #fca130 0px 0px 15px 5px; 
+    }
+    &.red {
+        box-shadow: #f93e3e 0px 0px 15px 5px; 
+    }
+    &.more-than-red {
+        box-shadow: #f93e3e 0px 0px 15px 5px;  
+    }
+    &.no-data {
+        box-shadow: #fbfbfb 0px 0px 15px 5px;  
+    }
+    &__upper {
+        display: flex;
+    }
+    p {
+        font-weight: 300;
+        text-transform: initial;
+    }
+    &__l,
+    &__r {
+        width: 50%;
+    }
+    &__r {
+        text-align: right;
+    }
+    &_airPollutionNum {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 16px;
+    }
+    &__name,
+    &__address {
+        font-size: 1.2rem;
+    }
+    &__name,
+    &__address,
+    &__details {
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    &__bottom {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        padding: 10px 0;
+        margin-top: 15px;
+    }
+}
+
+.stations {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .SingleStation {
+            width: 25%;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+}
