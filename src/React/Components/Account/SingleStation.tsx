@@ -52,7 +52,7 @@ export default class SingleStation extends React.Component<SingleStation.Props, 
         let classes = 'SingleStation';
         return (
            
-            <div className={classes} style={{boxShadow: `${this.getColor((this.props.airPollutionLevel * 2.2) / 10)} 0px 0px 15px 5px`}}>
+            <div className={classes} style={{boxShadow: `${this.getColor((this.props.airPollutionLevel * 2.2) / 10)} 0px 0px 20px 3px`}}>
                 <p>Poziom zanieczyszczenia powietrza: </p>        
                 <p><span className="SingleStation_airPollutionNum">{this.props.airPollutionLevel}</span></p>    
                 <p><span className="SingleStation__name">{this.props.name}</span></p>
