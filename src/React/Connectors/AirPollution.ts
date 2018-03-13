@@ -1,8 +1,11 @@
 import * as SensorsModel from './../Model/SensorsModel';
 
 const baseURL = 'https://airapi.airly.eu/v1/';
+// const headers = new Headers({
+//     'apikey': '6511f9d399474d3e9ffd5a48a93b0584'
+// });
 const headers = new Headers({
-    'Authorization': '6511f9d399474d3e9ffd5a48a93b0584'
+    'Authorization': '271f860c4bbe453cb57f512715e641e1'
 });
 
 const GAPI: string = 'AIzaSyDYLJlS_E4u-hElcJHtahZNhncyYwsEc7E';

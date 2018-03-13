@@ -21,6 +21,7 @@ namespace SingleStation {
         streetNumber: string
     };
 }
+const baseUrl = process.env.PUBLIC_URL;
 
 export default class SingleStation extends React.Component<SingleStation.Props, SingleStation.State> {
     constructor(props: any) {
@@ -57,7 +58,7 @@ export default class SingleStation extends React.Component<SingleStation.Props, 
                 <p><span className="SingleStation_airPollutionNum">{this.props.airPollutionLevel}</span></p>    
                 <p><span className="SingleStation__name">{this.props.name}</span></p>
                 <p>ul. <span className="SingleStation__address">{this.props.address.route} {this.props.address.streetNumber},<br /> {this.props.address.locality}</span></p>
-                <Link to={`/${this.props.id}`} >
+                <Link to={`${baseUrl}/${this.props.id}`} >
                     <button className="SingleStation__details">Szczegóły</button> 
                 </Link>                          
             </div>

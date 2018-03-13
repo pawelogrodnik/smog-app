@@ -2,6 +2,7 @@ import * as React from 'react';
 import SingleStation from './SingleStation';
 import { getStationsList, getCoords } from './../../Connectors/AirPollution';
 import * as SensorsModel from './../../Model/SensorsModel';
+import * as StationRepository from './../../Repository/StationRepository';
 
 namespace Main {
     export type Props = {
@@ -18,6 +19,7 @@ namespace Main {
 export default class Main extends React.Component<Main.Props, Main.State> {
     private initialLoad: boolean = true;
     private searchHistory: Array<string>;
+    private StationRepo = new StationRepository.StationRepository();
     constructor(props: any) {
         super(props);
         this.state = {
@@ -45,6 +47,7 @@ export default class Main extends React.Component<Main.Props, Main.State> {
             getCoords(this.state.inputValue).then(location => {
                 const { lat, lng } = (location.results[0].geometry.location);
                 getStationsList(lat, lng).then(stations => {
+                    this.StationRepo.stationList = stations;
                     this.setState({
                         stationsList: stations
                     });
@@ -67,7 +70,6 @@ export default class Main extends React.Component<Main.Props, Main.State> {
         localStorage.setItem('searchHistory', JSON.stringify(this.searchHistory));
     }
     initStorage() {
-        console.log(localStorage.getItem('searchHistory') === null);
         if (localStorage.getItem('searchHistory') !== null) {
             this.searchHistory = JSON.parse(localStorage.getItem('searchHistory'));
             this.setState({
@@ -75,8 +77,12 @@ export default class Main extends React.Component<Main.Props, Main.State> {
                 searchHistory: this.searchHistory
             },
                         () => this.getLatLang(event));
+                        
         } else {
             this.searchHistory = []; 
+            this.setState({
+                stationsList: this.StationRepo.stationList
+            }, () => console.log(this.StationRepo.stationList));
         }
     }
     sugesstedSearch(event) {

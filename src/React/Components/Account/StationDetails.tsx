@@ -41,6 +41,7 @@ namespace StationDetails {
         }
     };
 }
+const baseUrl = process.env.PUBLIC_URL;
 
 export default class StationDetails extends React.Component<StationDetails.Props, StationDetails.State> {
     constructor(props: StationDetails.Props) {
@@ -90,7 +91,7 @@ export default class StationDetails extends React.Component<StationDetails.Props
     render() {
         return (
             <div className="container container--big StationDetails">
-                <Link className="StationDetails__backlink" to={`/`}>Powrót</Link>
+                <Link className="StationDetails__backlink" to={`${baseUrl}/`}>Powrót</Link>
                 <div className="StationDetails__wrapper">
                     {this.state.summaryData !== null ?
                         <div className="StationDetails__summary">
@@ -99,7 +100,7 @@ export default class StationDetails extends React.Component<StationDetails.Props
                         </div>
 
                         : ''}
-                    {this.state.detailsData !== null ?
+                    {this.state.detailsData !== null  &&
                         <div className="StationDetails__stats">                  
                             <p className="StationDetails__single">
                                 <i className="wi wi-humidity" />
@@ -115,7 +116,7 @@ export default class StationDetails extends React.Component<StationDetails.Props
                             </p>
                             <i className="wi wi-fog" />
                         </div>
-                        : ''}
+                        }
                 </div>
                 {/* <div className="StationDetails__charts">
                     {MyChart}
