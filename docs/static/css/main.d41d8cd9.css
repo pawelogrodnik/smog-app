@@ -164,12 +164,11 @@
       width: 25%;
       margin-left: 20px;
       margin-right: 20px; }
-      @media (max-width: 767px){
-        .stations__wrapper .SingleStation {
-          width: 100%;
-        }
-      }
-  
+  @media (max-width: 767px){
+    .stations__wrapper .SingleStation {
+        width: 100%;
+    } 
+  }
   .StationDetails__wrapper {
     display: flex;
     align-items: center; }

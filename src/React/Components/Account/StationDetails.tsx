@@ -41,7 +41,7 @@ namespace StationDetails {
         }
     };
 }
-const baseUrl = process.env.PUBLIC_URL;
+// const baseUrl = process.env.PUBLIC_URL;
 
 export default class StationDetails extends React.Component<StationDetails.Props, StationDetails.State> {
     constructor(props: StationDetails.Props) {

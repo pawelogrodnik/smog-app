@@ -6,7 +6,7 @@ import {
 import * as React from 'react';
 import Main from './Account/Main';
 import StationDetails from './Account/StationDetails';
-const baseUrl = process.env.PUBLIC_URL;
+// const baseUrl = process.env.PUBLIC_URL;
 
 export default class System extends React.Component<any>  {
     public render() {

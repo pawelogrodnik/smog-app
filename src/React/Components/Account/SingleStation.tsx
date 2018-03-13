@@ -21,7 +21,7 @@ namespace SingleStation {
         streetNumber: string
     };
 }
-const baseUrl = process.env.PUBLIC_URL;
+// const baseUrl = process.env.PUBLIC_URL;
 
 export default class SingleStation extends React.Component<SingleStation.Props, SingleStation.State> {
     constructor(props: any) {
