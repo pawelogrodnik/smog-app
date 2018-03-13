@@ -99,7 +99,7 @@ export default class StationDetails extends React.Component<StationDetails.Props
                         </div>
 
                         : ''}
-                    {this.state.detailsData.currentMeasurements !== undefined ?
+                    {this.state.detailsData !== null ?
                         <div className="StationDetails__stats">                  
                             <p className="StationDetails__single">
                                 <i className="wi wi-humidity" />

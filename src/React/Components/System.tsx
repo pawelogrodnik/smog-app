@@ -10,7 +10,7 @@ import StationDetails from './Account/StationDetails';
 export default class System extends React.Component<any>  {
     public render() {
         return (
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route exact path={'/'} component={Main} />
                     <Route exact path={'/:id'} component={StationDetails} />
