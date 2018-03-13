@@ -13,8 +13,8 @@ export default class System extends React.Component<any>  {
         return (
             <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
-                    <Route exact path={`${baseUrl}/`} component={Main} />
-                    <Route exact path={`${baseUrl}/:id`} component={StationDetails} />
+                    <Route exact path={`/`} component={Main} />
+                    <Route exact path={`/:id`} component={StationDetails} />
                 </Switch>
             </Router>
         );

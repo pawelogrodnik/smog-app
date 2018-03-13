@@ -91,7 +91,7 @@ export default class StationDetails extends React.Component<StationDetails.Props
     render() {
         return (
             <div className="container container--big StationDetails">
-                <Link className="StationDetails__backlink" to={`${baseUrl}/`}>Powrót</Link>
+                <Link className="StationDetails__backlink" to={`/`}>Powrót</Link>
                 <div className="StationDetails__wrapper">
                     {this.state.summaryData !== null ?
                         <div className="StationDetails__summary">

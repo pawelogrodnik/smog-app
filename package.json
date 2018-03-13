@@ -2,6 +2,7 @@
   "name": "smog-app",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://pawelogrodnik.github.io/smog-app",
   "dependencies": {
     "@types/googlemaps": "^3.30.7",
     "@types/markerclustererplus": "^2.1.33",
@@ -111,5 +112,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "compilerOptions": {
+    "baseUrl": "."
   }
 }

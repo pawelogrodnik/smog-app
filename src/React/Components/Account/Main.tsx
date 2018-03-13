@@ -51,8 +51,8 @@ export default class Main extends React.Component<Main.Props, Main.State> {
                     this.setState({
                         stationsList: stations
                     });
-                });
-            });
+                }).catch( (err) => console.log(err));
+            }).catch( (err) => console.log(err));
         } else {
             this.setState({
                 displayError: true
