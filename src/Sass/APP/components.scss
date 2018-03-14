@@ -6,31 +6,31 @@
     margin-bottom: 40px;
     min-height: 255px;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 50px 5px;
     transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 50px 5px;
     &:hover {
-        cursor: pointer;
-        &.green {
-            box-shadow: #49cc90 0px 0px 15px 5px;  
-        }
-        &.greenDark {
-            box-shadow: #49cc90 0px 0px 15px 5px;  
-        }
-        &.yellow {
-            box-shadow: #fca130 0px 0px 15px 5px;  
-        }
-        &.orange {
-            box-shadow: #fca130 0px 0px 15px 5px; 
-        }
-        &.red {
-            box-shadow: #f93e3e 0px 0px 15px 5px; 
-        }
-        &.more-than-red {
-            box-shadow: #f93e3e 0px 0px 15px 5px;  
-        }
-        &.no-data {
-            box-shadow: #fbfbfb 0px 0px 15px 5px;  
-        }
+        cursor: pointer;    
+        // &.green {
+        //     box-shadow: #49cc90 0px 0px 15px 5px;  
+        // }
+        // &.greenDark {
+        //     box-shadow: #49cc90 0px 0px 15px 5px;  
+        // }
+        // &.yellow {
+        //     box-shadow: #fca130 0px 0px 15px 5px;  
+        // }
+        // &.orange {
+        //     box-shadow: #fca130 0px 0px 15px 5px; 
+        // }
+        // &.red {
+        //     box-shadow: #f93e3e 0px 0px 15px 5px; 
+        // }
+        // &.more-than-red {
+        //     box-shadow: #f93e3e 0px 0px 15px 5px;  
+        // }
+        // &.no-data {
+        //     box-shadow: #fbfbfb 0px 0px 15px 5px;  
+        // }
     }
    
     // &.green, &.more-than-red {

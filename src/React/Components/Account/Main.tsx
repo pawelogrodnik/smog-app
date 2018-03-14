@@ -98,7 +98,7 @@ export default class Main extends React.Component<Main.Props, Main.State> {
     render() {
         return (
             <div className="container container--big">
-                <form onSubmit={this.getLatLang}>
+                <form onSubmit={(e) => this.getLatLang(e)}>
                     <div className="input-field">
                         <label htmlFor="location">Podaj swoją lokalizację</label>
                         <input id="location" type="text" value={this.state.inputValue} placeholder="Lokalizacja" onChange={this.handleUpdate}/>

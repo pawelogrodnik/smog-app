@@ -114,24 +114,10 @@
     margin-bottom: 40px;
     min-height: 255px;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 50px 5px;
-    transition: 0.5s; }
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 50px 5px; }
     .SingleStation:hover {
       cursor: pointer; }
-      .SingleStation:hover.green {
-        box-shadow: #49cc90 0px 0px 15px 5px; }
-      .SingleStation:hover.greenDark {
-        box-shadow: #49cc90 0px 0px 15px 5px; }
-      .SingleStation:hover.yellow {
-        box-shadow: #fca130 0px 0px 15px 5px; }
-      .SingleStation:hover.orange {
-        box-shadow: #fca130 0px 0px 15px 5px; }
-      .SingleStation:hover.red {
-        box-shadow: #f93e3e 0px 0px 15px 5px; }
-      .SingleStation:hover.more-than-red {
-        box-shadow: #f93e3e 0px 0px 15px 5px; }
-      .SingleStation:hover.no-data {
-        box-shadow: #fbfbfb 0px 0px 15px 5px; }
     .SingleStation__upper {
       display: flex; }
     .SingleStation p {
@@ -164,11 +150,10 @@
       width: 25%;
       margin-left: 20px;
       margin-right: 20px; }
-  @media (max-width: 767px){
-    .stations__wrapper .SingleStation {
-        width: 100%;
-    } 
-  }
+      @media (max-width: 767px) {
+        .stations__wrapper .SingleStation {
+          width: 100%; } }
+  
   .StationDetails__wrapper {
     display: flex;
     align-items: center; }
@@ -224,7 +209,7 @@
   .suggestions__box {
     text-align: center;
     max-width: 600px;
-    margin: 10px auto; }
+    margin: 10px auto 50px; }
     .suggestions__box span {
       cursor: pointer; }
       .suggestions__box span:hover {
@@ -233,3 +218,4 @@
         content: ", "; }
       .suggestions__box span:last-of-type:after {
         content: '.'; }
+  

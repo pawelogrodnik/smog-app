@@ -8,21 +8,7 @@ namespace StationDetails {
         match: any;
     };
     export type State = {
-        detailsData: SensorsModel.SensorMeasurementsResponse
-        // {
-        //     currentMeasurements: {
-        //         airQualityIndex: number,
-        //         humidity: number
-        //         pm1: number,
-        //         pm10: number,
-        //         pm25: number,
-        //         pollutionLevel: number,
-        //         pressure: number,
-        //         temperature: number
-        //     },
-        //     forecast: any,
-        //     history: any
-        // }
+        detailsData: SensorsModel.SensorMeasurementsResponse,
         summaryData: {
             address: {
                 country: string
